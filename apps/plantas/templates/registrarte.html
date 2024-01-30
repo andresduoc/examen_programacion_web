@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUERTOS VECINOS</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<!-- SECCION CABEZERA  -->
+
+<header>
+
+    <div class="header-1">
+
+        <div class="share">
+            <span> Siguenos : </span>
+            <a href="www.facebook.com" class="fab fa-facebook-f"></a>
+            <a href="www.twitter.com" class="fab fa-twitter"></a>
+            <a href="www.instagram.com" class="fab fa-instagram"></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'index' %}">Inicio</a>
+            <a href="{% url 'iniciar_sesion' %}" >Iniciar sesion</a>
+            <a href="{% url 'AgregarProducto'  %}">Agregar producto</a>
+        </nav>
+
+    </div>
+
+    <div class="header-2">
+
+        <a href="{% url 'index' %}" class="logo"> <i class="fas fa-seedling"></i> HUERTOS VECINOS </a>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Buscar....">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-3">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">Inicar Sesion</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="{% url 'iniciar_sesion' %}" class="fas fa-user-circle"></a>
+        </div>
+
+    </div>
+
+</header>
+<script src="{% static 'js/scrip.js' %}"></script>
+
+<!-- TERMINO SECCION CABEZERA -->
+<!--INICIO SECCION registro-->
+<section class="contact" id="contact">
+    <h1 class="heading">Registro de usuario</h1>
+    <br><br>
+    <div class="row">
+          <form id="register-form" action="">
+          
+              <div class="inputBox">
+                  <input type="text" id="name" name="name" required><br>
+                  <label for="name">Nombre:</label>
+                  <span id="name-error" style="display: none; color: red;">El nombre debe tener una mayúscula y al menos tres letras.</span>
+                  <span id="name-success" style="display: none; color: green;">El nombre es válido.</span>
+
+              </div>
+              <div class="inputBox">
+                  <input type="email" id="email" name="email" required><br>
+                  <label for="email">Correo electrónico:</label>
+                  <span id="email-error" style="display: none; color: red;">El correo electrónico debe contener "@", ".", "com" o "cl".</span>
+                  <span id="email-success" style="display: none; color: green;">El correo electrónico es válido.</span>
+
+              </div>
+              <div class="inputBox">
+                  <input type="password" id="password" name="password" required><br>
+                  <label for="password">Contraseña:</label>
+                  <span id="password-error" style="display: none; color: red;">La contraseña debe tener al menos nueve caracteres.</span>
+                  <span id="password-success" style="display: none; color: green;">La contraseña es válida.</span>
+
+              </div>
+
+              
+              <a button class="btn" id="validate-button">Validar datos</a>
+          </form>
+      </div>
+  </section>
+  <script src="{% static 'js/validador.js' %}"></script>
+
+<!--FIN SECCION CONTACTO-->
+<!--INICIO SECCION INFO-->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Sobre nosotros</h3>
+            <p>Somos un grupo de vecinos que vende articulos de jardineria para ayduar a una fundacion sin fines de lucro</p>
+        </div>
+        <div class="box">
+            <h3></h3>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <div class="box">
+            <h3>Siguenos en nuestras redes</h3>
+            <a href="www.facebook.com">facebook</a>
+            <a href="www.twitter.com">twitter</a>
+            <a href="www.instagram.com">instagram</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> | Todos los derechos reservados| </h1>
+    
+</section>
+
+<a href="#home" class="scroll-top fas fa-angle-up"></a>
+<script src="{% static 'js/validador.js' %}"></script>
+<!--FIN SECCION INFO-->
+</body>
+</html>
